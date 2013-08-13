@@ -1,0 +1,12 @@
+# Helpers for configuration
+config: &config
+  adapter: jdbc
+  driver: net.sourceforge.jtds.jdbc.Driver
+  username: username
+  password: password
+  pool: 20
+
+development:
+  <<: *config
+  url: jdbc:jtds:sqlserver://SERVER_NAME:1433;databaseName=database
+
